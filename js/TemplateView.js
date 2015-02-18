@@ -30,7 +30,7 @@
             this.loadTemplate(this.options.view || this.view).then(function(fn) {
                 var d = self.model || self.collection;
                 d && (self.el.innerHTML = fn({
-                    data: d
+                    data: d//.toJSON() -- trying this so we can get cid's
                 }));
             })
         }

@@ -1,0 +1,14 @@
+<form class="addItemForm">
+    <div class="addItem">
+        <input type="text" name="John">
+    </div>
+    <button>+</button>
+</form>
+<ul>
+    <% data.each(function(l){ %>
+        <li cid="<%= l.cid %>">
+            <span class="data"><%= l.get('title') %></span>
+            <input type="checkbox">
+        </li>
+    <% }) %>
+</ul>

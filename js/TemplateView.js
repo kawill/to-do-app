@@ -29,6 +29,7 @@
             var self = this;
             this.loadTemplate(this.options.view || this.view).then(function(fn) {
                 var d = self.model || self.collection;
+                // debugger;
                 d && (self.el.innerHTML = fn({
                     data: d//.toJSON() -- trying this so we can get cid's
                 }));

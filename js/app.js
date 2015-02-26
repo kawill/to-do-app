@@ -23,6 +23,6 @@ function app(){
         // start app?
 
         new Backbone.TodoRouter();
-    })
+    });
 
 }

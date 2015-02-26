@@ -882,100 +882,65 @@ body {
   -webkit-transition: opacity .25s ease;
           transition: opacity .25s ease; }
 
-.container1 {
-  max-width: 60ch;
-  background-color: #efefef;
-  border: 2px solid #444; }
-  .container1 form {
-    padding: 1em;
-    position: relative; }
-    .container1 form div {
-      position: relative;
-      margin-right: 4em; }
-      .container1 form div input {
-        width: 100%;
-        padding: 1em;
-        border: 1px solid #444; }
-    .container1 form button {
-      display: inline-block;
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      width: 3rem;
-      height: 3.2rem;
-      background-color: #444;
-      color: white;
-      font-size: 2em;
-      line-height: 1em;
-      border: none; }
-  .container1 ul {
-    padding-left: 1em;
-    list-style: none; }
-    .container1 ul li {
-      border-bottom: 1px solid #444;
-      position: relative; }
-      .container1 ul li span {
-        display: inline-block;
-        padding: 1em 3em 1em 0;
-        width: 100%; }
-      .container1 ul li:last-child {
-        border-bottom-width: 0px; }
-      .container1 ul li input[type="checkbox"] {
-        position: absolute;
-        top: 1em;
-        right: 1em; }
-
-.container2 {
-  max-width: 40ch;
-  background-color: #efefef;
-  border: 2px solid #444;
-  position: absolute;
-  top: 0;
-  margin-left: 60ch;
-  height: 100%;
-  padding: 1em; }
-  .container2 textarea {
-    width: 100%; }
-  .container2 form {
-    padding: 1em;
-    position: relative; }
-    .container2 form div {
-      position: relative;
-      margin-right: 4em; }
-      .container2 form div input {
-        width: 100%;
-        padding: 1em;
-        border: 1px solid #444; }
-    .container2 form button {
-      display: inline-block;
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      width: 3rem;
-      height: 3.2rem;
-      background-color: #444;
-      color: white;
-      font-size: 2em;
-      line-height: 1em;
-      border: none; }
-  .container2 ul {
-    padding-left: 1em;
-    list-style: none; }
-    .container2 ul li {
-      border-bottom: 1px solid #444;
-      position: relative; }
-      .container2 ul li span {
-        display: inline-block;
-        padding: 1em 3em 1em 0;
-        width: 100%; }
-      .container2 ul li:last-child {
-        border-bottom-width: 0px; }
-      .container2 ul li input[type="checkbox"] {
-        position: absolute;
-        top: 1em;
-        right: 1em; }
+h4 {
+  margin: 1em auto;
+  text-align: center; }
 
 .container {
-  margin: 0 auto;
-  position: relative; }
+  max-width: 60ch;
+  background-color: #efefef;
+  border: 2px solid #444;
+  margin: 0 auto; }
+  .container form {
+    padding: 1em;
+    position: relative; }
+    .container form div {
+      position: relative;
+      margin-right: 4em; }
+      .container form div input {
+        width: 100%;
+        padding: 1em;
+        border: 1px solid #444; }
+    .container form button {
+      display: inline-block;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 3rem;
+      height: 3.2rem;
+      background-color: #444;
+      color: white;
+      font-size: 2em;
+      line-height: 1em;
+      border: none; }
+  .container ul {
+    padding-left: 1em;
+    list-style: none; }
+    .container ul li {
+      border-bottom: 1px solid #444;
+      position: relative; }
+      .container ul li.taskdone {
+        background-color: yellow; }
+      .container ul li.urgent {
+        background-color: red; }
+      .container ul li span {
+        display: inline-block;
+        padding: 1em 3em 1em 0;
+        width: 100%; }
+      .container ul li:last-child {
+        border-bottom-width: 0px; }
+      .container ul li input[type="checkbox"] {
+        position: absolute;
+        top: 1em;
+        right: 1em; }
+        .container ul li input[type="checkbox"]:checked ~ .taskdone {
+          text-decoration: line-through; }
+      .container ul li .grid {
+        max-height: 0;
+        overflow: hidden; }
+        .container ul li .grid:before {
+          content: "";
+          display: block; }
+      .container ul li:not(.taskdone):hover .grid {
+        max-height: 700px; }
 
